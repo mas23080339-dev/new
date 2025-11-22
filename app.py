@@ -22,10 +22,10 @@ vectorizer = TfidfVectorizer()
 tfidf_matrix = vectorizer.fit_transform(df["FullText"])
 
 # UI
-st.title("🎽 Adidas Product Recommendation (CBF)")
-st.write("Tìm sản phẩm tương tự dựa vào nội dung mô tả")
+st.title("Chúng tôi bán áo cận date :)))")
+st.write("Những gì bạn cần chúng tôi không có")
 
-user_input = st.text_input("Nhập tên sản phẩm bạn muốn tìm (không cần đúng chính tả)")
+user_input = st.text_input("Nhập tên sản phẩm bạn muốn tìm")
 
 if user_input:
     names = df["Tên sản phẩm"].tolist()
