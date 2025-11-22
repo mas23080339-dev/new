@@ -7,7 +7,7 @@ from rapidfuzz import process, fuzz
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data.csv")
+    df = pd.read_csv("gucci.csv", encoding="utf-8")
     df["FullText"] = (
         df["Tên sản phẩm"].fillna("") + " " +
         df["Mô tả"].fillna("") + " " +
