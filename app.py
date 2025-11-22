@@ -36,7 +36,7 @@ if user_input:
     else:
         best_name = match[0]
         index = df[df["Tên sản phẩm"] == best_name].index[0]
-        st.success(f"Từ khóa gần đúng nhất: **{best_name}**")
+        st.success(f"Sản phẩm của chúng tôi đang có: **{best_name}**")
 
         scores = cosine_similarity(tfidf_matrix[index], tfidf_matrix)[0]
         ranking = sorted(list(enumerate(scores)), key=lambda x: x[1], reverse=True)[1:6]
